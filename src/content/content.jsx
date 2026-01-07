@@ -29,7 +29,7 @@ const currentYear = new Date().getFullYear()
 export const infos = {
   name: 'FLC Assessoria Empresarial e Jurídica ',
   email: 'contato', // Email desejado pelo cliente
-  emailSecundario: 'A_Definir', // Email desejado pelo cliente
+  emailSecundario: 'falucamargo@aasp.org.br', // Email desejado pelo cliente
   domain: 'lupinocamargo.com.br', // Sem "www"
   phone: {
     ddd: '11',
@@ -155,7 +155,7 @@ const content = {
       alt: 'Imagem ilustrativa da Seção Início',
       ctaButtonAriaLabel:
         'Botão para chamada de ação para contato pelo whatsapp',
-      ctaButtonText: 'Fale com a FLC agora',
+      ctaButtonText: 'Falar com a FLC agora',
       ctaButtonTextSecondary: 'Agende sua consulta',
       obsHero: {
         icon: <LucideIdCard />,
@@ -187,8 +187,9 @@ const content = {
       miniTag: 'ESPECIALIDADES',
       title: (
         <h1>
-          Especialista em Direito do{' '}
-          <span className="destaque italic font-light"> Trabalho</span>
+          Especialista em{' '}
+          <span className="destaque italic font-light"> Assessoria</span>{' '}
+          Empresarial
         </h1>
       ),
       subtitle:
@@ -201,7 +202,7 @@ const content = {
         card1: {
           title: 'Assessoria Empresarial',
           subtitle:
-            'Consultoria preventiva e orientação jurídica para empresas.',
+            'Consultoria contínua, preventiva,  jurídica, contábil, Obrigações de depto pessoal, Tributárias e fiscais.',
           description: (
             <div>
               A_Definir
@@ -232,7 +233,7 @@ const content = {
         card3: {
           title: 'Civil, Família, Sucessões e Imobiliário',
           subtitle:
-            'Atendimento em demandas cíveis, familiares e patrimoniais.',
+            'Atendimento em demandas cíveis, familiares, patrimoniais, Condominiais e imobiliárias.',
           description: (
             <div>
               A_Definir <br />
@@ -247,7 +248,7 @@ const content = {
         card4: {
           title: 'Direito Trabalhista',
           subtitle:
-            'Assessoria em questões relacionadas às relações de trabalho.',
+            'Atendimento às relações de trabalho tanto em favor de empregados quanto de empregadores.',
           description: (
             <div>
               A_Definir
@@ -378,7 +379,9 @@ const content = {
       miniTag: 'FALE CONOSCO',
       title: (
         <h1>
-          Enfrentando um problema jurídico? Deixe que cuidamos disso para você!
+          Tenha mais que um suporte jurídico. Tenha mais que um suporte
+          contábil. Tenha uma assessoria empresarial. <br /> Deixe que cuidamos
+          disso pra você.
         </h1>
       ),
       subtitle:
@@ -391,10 +394,9 @@ const content = {
       titleDireita: (
         <h1 className="text-title5 my-3 font-mainFont">WhatsApp</h1>
       ),
-      ctaButtonText: 'Entre em contato',
+      ctaButtonText: 'Entrar em contato',
       ctaButtonAriaLabel:
         'Botão para chamada de ação para contato pelo whatsapp',
-      ctaButtonText: 'Entre em Contato',
     },
     steps: {
       miniTag: 'PASSO A PASSO',

@@ -7,7 +7,7 @@ import { Link } from 'react-scroll'
 import FooterSocialIcons from '../sectionElements/footer/FooterSocialIcons'
 import content from '../../content/content'
 
-function FooterNovoTemplate({ mapa, colorMode }) {
+function FooterNovoTemplate({ mapa, colorMode, emailSecond = true }) {
   const labels = content.texts.navbar.menuItems
   const ids = content.texts.navbar.menuId
   const [visible, setVisible] = useState(false)
@@ -132,12 +132,20 @@ function FooterNovoTemplate({ mapa, colorMode }) {
                         {content.texts.infos.phone}
                       </span>
                     </li>
-                    <li className="flex items-center gap-3">
+                    {/* <li className="flex items-center gap-3">
                       <Mail className={`w-5 h-5 shrink-0 ${iconColor}`} />
                       <span className="font-secondFont font-light text-paragraph3 tablet2:text-paragraph3 desktop1:text-paragraph3">
                         {content.texts.infos.email}
                       </span>
-                    </li>
+                    </li> */}
+                    {emailSecond && (
+                      <li className="flex items-center gap-3">
+                        <Mail className={`w-5 h-5 shrink-0 ${iconColor}`} />
+                        <span className="font-secondFont font-light text-paragraph3 tablet2:text-paragraph3 desktop1:text-paragraph3">
+                          {content.texts.infos.emailSecundario}
+                        </span>
+                      </li>
+                    )}
                   </ul>
                 </div>
               </div>
