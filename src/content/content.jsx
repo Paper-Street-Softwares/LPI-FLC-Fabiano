@@ -403,7 +403,7 @@ const content = {
       title: (
         <h1>
           Como <span className="destaque italic font-light"> cuidamos</span> do
-          seu direito trabalhista?
+          seu direito?
         </h1>
       ),
       subtitle: '',
