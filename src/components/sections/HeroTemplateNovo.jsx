@@ -73,17 +73,20 @@ function HeroTemplateNovo({
   const { showGlobalButton } = useColorMode()
   const [isPlaying, setIsPlaying] = useState(false)
   const audioRef = useRef(null)
+  const [hasEnded, setHasEnded] = useState(false)
 
   const toggleAudio = () => {
     if (!audioRef.current) return
 
-    if (isPlaying) {
-      audioRef.current.pause()
-    } else {
+    if (audioRef.current.paused) {
+      audioRef.current.currentTime = 0
       audioRef.current.play()
+      setIsPlaying(true)
+      setHasEnded(false) // 🔥 ESSENCIAL
+    } else {
+      audioRef.current.pause()
+      setIsPlaying(false)
     }
-
-    setIsPlaying(!isPlaying)
   }
 
   return (
@@ -280,17 +283,31 @@ function HeroTemplateNovo({
                   <div className="flex items-center gap-3">
                     <button
                       onClick={toggleAudio}
-                      className="flex items-center gap-2 rounded-lg px-4 py-2 text-white hover:opacity-90 transition hover:scale-110 duration-300"
+                      className="flex items-center gap-2 rounded-lg px-4 py-2 text-white hover:opacity-90 "
                     >
                       {isPlaying ? (
-                        <Pause className="text-primaryLight" size={18} />
+                        <Pause
+                          size={18}
+                          className="transition hover:scale-110 duration-300 text-primaryLight"
+                        />
                       ) : (
-                        <Play className="text-primaryLight" size={18} />
+                        <Play
+                          size={18}
+                          className="transition hover:scale-110 duration-300 text-primaryLight"
+                        />
                       )}
-                      Vinheta institucional
+                      Ouça nossa vinheta institucional
                     </button>
 
-                    <audio ref={audioRef} src={audio} />
+                    <audio
+                      ref={audioRef}
+                      src={audio}
+                      onEnded={() => {
+                        setIsPlaying(false)
+                        setHasEnded(true)
+                        audioRef.current.currentTime = 0
+                      }}
+                    />
                   </div>
                 </motion.div>
               </div>

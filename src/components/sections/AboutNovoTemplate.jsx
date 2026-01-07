@@ -109,8 +109,8 @@ function AboutNovoTemplate({ ButtonModal, colorMode }) {
                 <div className="space-y-4">
                   {[
                     {
-                      title: 'Defesa Estratégica ',
-                      desc: 'Atuação trabalhista personalizada para proteger seus direitos em cada etapa.',
+                      title: 'Defesa Estratégica',
+                      desc: 'Atuação personalizada para proteger seus direitos em cada etapa.',
                     },
                     {
                       title: 'Transparência Real ',
